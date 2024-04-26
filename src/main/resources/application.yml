@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: helloworld
+#otel:
+#  propagators:
+#    - tracecontext
+#    - b3
+
+
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]"
